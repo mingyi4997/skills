@@ -1,0 +1,22 @@
+{
+  "name": "my-skills",
+  "owner": {
+    "name": "yangshan",
+    "email": "yangshan@example.com"
+  },
+  "metadata": {
+    "description": "Custom skills collection for business process optimization and workflow design",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "process-optimization-skills",
+      "description": "Collection of skills for business process redesign and optimization based on methodologies like BPR and end-to-end process design",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/end-to-end-process-design"
+      ]
+    }
+  ]
+}
