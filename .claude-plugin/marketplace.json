@@ -5,8 +5,8 @@
     "email": "yangshan@example.com"
   },
   "metadata": {
-    "description": "Custom skills collection for business process optimization and workflow design",
-    "version": "1.0.0"
+    "description": "Custom skills collection for business process optimization, workflow design, and AI-powered planning",
+    "version": "1.1.0"
   },
   "plugins": [
     {
@@ -16,6 +16,15 @@
       "strict": false,
       "skills": [
         "./skills/end-to-end-process-design"
+      ]
+    },
+    {
+      "name": "planning-skills",
+      "description": "Manus-style file-based planning for complex tasks using persistent markdown files (task_plan.md, findings.md, progress.md)",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/planning-with-files"
       ]
     }
   ]

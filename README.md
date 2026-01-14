@@ -11,10 +11,14 @@ my-skills/
 ├── .claude-plugin/
 │   └── marketplace.json          # Skill marketplace 配置文件
 ├── skills/                       # Skills 目录
-│   └── end-to-end-process-design/  # 端到端流程设计 skill
-│       ├── SKILL.md              # Skill 主文件
-│       ├── references/           # 参考文档
-│       └── assets/               # 输出模板
+│   ├── end-to-end-process-design/  # 端到端流程设计 skill
+│   │   ├── SKILL.md              # Skill 主文件
+│   │   ├── references/           # 参考文档
+│   │   └── assets/               # 输出模板
+│   └── planning-with-files/      # Manus 风格的文件式规划 skill
+│       ├── SKILL.md
+│       ├── templates/            # 任务规划模板
+│       └── scripts/              # 辅助脚本
 ├── README.md                     # 本文件
 └── .gitignore                    # Git 忽略规则
 ```
@@ -33,6 +37,31 @@ my-skills/
 - 基于六大原则的流程重新设计
 - 实施路线图规划
 - 流程所有者设置
+
+### 2. Planning with Files (Manus 风格的文件式规划)
+基于 Manus AI（Meta 以 20 亿美元收购）的工作方式，使用持久化 markdown 文件作为"磁盘上的工作记忆"。
+
+**触发方式**：
+- 手动调用：`/planning-with-files`
+- 自动触发：复杂的多步骤任务（>5 个工具调用）
+- 适用场景：研究任务、构建项目、多步骤任务
+
+**核心功能**：
+- 自动创建 `task_plan.md` 追踪任务阶段
+- 使用 `findings.md` 存储研究发现
+- 通过 `progress.md` 记录会话日志
+- 钩子系统：任务前重读计划、文件修改后提醒更新
+- 错误日志：避免重复失败
+
+**三文件模式**：
+```
+task_plan.md  → 追踪阶段和进度（checkboxes）
+findings.md   → 存储研究和发现（而非塞入上下文）
+progress.md   → 会话日志和测试结果
+```
+
+**原作者**: [Ahmad Othman Ammar Adi](https://github.com/OthmanAdi/planning-with-files)
+**许可证**: MIT
 
 ## 添加新 Skill
 
