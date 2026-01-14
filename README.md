@@ -1,5 +1,7 @@
 # My Custom Skills
 
+> 我创建的 skills 和收集到的优秀 skills
+
 这是我的自定义 Claude Code Skills 仓库，用于统一管理所有自定义技能。
 
 ## 目录结构
